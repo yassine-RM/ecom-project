@@ -16,4 +16,4 @@ COPY . .
 EXPOSE 3000
 
 # Start the app (for backend or frontend)
-CMD ["npm", "start"]
+CMD ["npm", "run", "start:dev"]

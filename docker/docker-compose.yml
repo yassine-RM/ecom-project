@@ -6,6 +6,8 @@ services:
       context: ../app/backend  # Path to backend from docker folder
       dockerfile: Dockerfile  # Use the shared Dockerfile
     container_name: nestjs-backend
+    volumes:
+      - ../app/backend:/app
     ports:
       - "3000:3000"
     depends_on:
@@ -24,6 +26,8 @@ services:
       context: ../app/frontend  # Path to frontend from docker folder
       dockerfile: Dockerfile  # Use the shared Dockerfile
     container_name: react-frontend
+    volumes:
+    - ../app/frontend:/app
     ports:
       - "3001:3000"
     depends_on:
